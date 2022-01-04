@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-vars
+  namespace: flux-system
+data:
+  CONFIG_METALLB_RANGE: "192.168.3.240-192.168.3.250"
+  CONFIG_NFS_SERVER_ADDRESS: "192.168.1.200"
+  CONFIG_NFS_SERVER_PATH: "/volume1/NFS"
+  CONFIG_TIMEZONE: "Europe/Stockholm"
