@@ -5,3 +5,5 @@ resources:
 - namespaces
 # - metallb
 # - rook-ceph
+# - nfs-provisioner
+# - ingress
