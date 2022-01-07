@@ -16,16 +16,22 @@ A mini kubernetes cluster
 Set everything up using PXE and Ansible
 - [ ] Baremetal provisioning using PXE boot
 - [ ] Kubernetes installation using Ansible
-- [ ] GitOps using Flux
+- [X] GitOps using Flux and SOPS
 
 ### Infra
 Configure all base services
-- [ ] Rook-Ceph storage
-- [ ] NFS storage
-- [ ] Ingress-nginx
+- [X] Rook-Ceph storage
+- [X] NFS storage
+- [X] Ingress-nginx
 
 ### Apps
 Configure applications
 - [ ] HomeAssistant
 - [ ] DeConz
 - [ ] Gitea
+
+
+
+
+
+
