@@ -13,6 +13,9 @@ A internal kuberenets cluster with three nodes. The cluster will be loadbalanced
 - 256GB SSD
 - 500GB NVMe
 
+### Prereq
+- [X] DNS domain wildcard
+- [X] DHCP range
 
 ### Bootstrap
 Set everything up using PXE and Ansible
@@ -22,9 +25,10 @@ Set everything up using PXE and Ansible
 
 ### Infra
 Configure all base services using GitOps
-- [ ] Rook-Ceph storage
-- [ ] NFS storage
+- [ ] MetalLB
 - [ ] Ingress-nginx
+- [ ] NFS storage
+- [ ] Rook-Ceph storage
 - [ ] Velero
 
 ### Apps
