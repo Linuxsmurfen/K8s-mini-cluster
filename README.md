@@ -20,8 +20,8 @@ A internal kuberenets cluster with three nodes. The cluster will be loadbalanced
 ### Bootstrap
 Set everything up using PXE and Ansible
 - [ ] Baremetal provisioning using PXE boot
-- [ ] Kubernetes installation using Ansible and Kubeadm
-- [ ] Network setup using Calico
+- [ ] Kubernetes installation using Kubeadm
+- [ ] Network setup with Calico
 - [ ] GitOps using Flux and SOPS
 
 ### Infra
