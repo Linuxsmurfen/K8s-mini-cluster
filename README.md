@@ -19,10 +19,10 @@ Set everything up using PXE and Ansible
 - [X] GitOps using Flux and SOPS
 
 ### Infra
-Configure all base services
-- [X] Rook-Ceph storage
-- [X] NFS storage
-- [X] Ingress-nginx
+Configure all base services using GitOps
+- [ ] Rook-Ceph storage
+- [ ] NFS storage
+- [ ] Ingress-nginx
 
 ### Apps
 Configure applications
