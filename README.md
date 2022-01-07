@@ -16,19 +16,21 @@ A mini kubernetes cluster
 Set everything up using PXE and Ansible
 - [ ] Baremetal provisioning using PXE boot
 - [ ] Kubernetes installation using Ansible
-- [X] GitOps using Flux and SOPS
+- [ ] GitOps using Flux and SOPS
 
 ### Infra
 Configure all base services using GitOps
 - [ ] Rook-Ceph storage
 - [ ] NFS storage
 - [ ] Ingress-nginx
+- [ ] Velero
 
 ### Apps
-Configure applications
+Configure applications using GitOps
 - [ ] HomeAssistant
 - [ ] DeConz
 - [ ] Gitea
+- [ ] KubeView
 
 
 
