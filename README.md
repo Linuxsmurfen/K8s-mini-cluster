@@ -18,8 +18,11 @@ A internal kuberenets cluster with three nodes. The cluster will be loadbalanced
 - [X] DHCP range
 
 ### Bootstrap
-Set everything up using PXE and Ansible
-- [ ] Baremetal provisioning using PXE boot
+Setup the OS using PXE boot
+- [ ] Baremetal provisioning
+
+### K8s install
+Configure the OS and install Kubernetes using Ansible
 - [ ] Kubernetes installation using Kubeadm
 - [ ] Network setup with Calico
 - [ ] GitOps using Flux and SOPS
