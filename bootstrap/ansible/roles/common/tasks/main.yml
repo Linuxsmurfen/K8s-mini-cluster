@@ -1,0 +1,4 @@
+---
+
+# Prepare the servers
+- include: k8s_requirements.yml 

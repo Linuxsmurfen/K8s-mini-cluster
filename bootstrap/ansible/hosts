@@ -1,0 +1,10 @@
+[cluster]
+k8s100 ansible_host=192.168.3.59
+
+
+[master]
+k8s100
+
+[workers]
+
+
