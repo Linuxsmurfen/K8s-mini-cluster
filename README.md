@@ -3,23 +3,26 @@ A mini kubernetes cluster
 
 ## Overview
 < Work in progress >   
-A internal kuberenets cluster with three nodes. The cluster will be loadbalanced and use an ingress with wildcard DNS. The storage will be served by ceph and remote NFS storage.
+A internal kubernetes cluster with three nodes. The cluster will be loadbalanced and use an ingress with wildcard DNS. The storage will be served by ceph and remote NFS storage.
 
 ### Hardware
 ![Hardware](/mini-k8s-cluster.jpg)
 
-3 Elitedesk 800g2 nodes with
+Three HP Elitedesk 800g2 nodes with
 - 16GB Memory
 - 256GB SSD
 - 500GB NVMe
 
 ### Prereq
+Make sure DHCP and DNS are configured
 - [X] DNS domain wildcard
 - [X] DHCP range
 
 ### Bootstrap
-Setup the OS using PXE boot
-- [ ] Baremetal provisioning
+Install and prepare the OS
+- [X] Autoinstall
+- [ ] (Baremetal provisioning)
+- [ ] Prepare the OS
 
 ### K8s install
 Configure the OS and install Kubernetes using Ansible
