@@ -1,8 +1,5 @@
 ---
 
-# Prepare the server for kubernetes install
-
-
 # Set hostname on the servers
 - name: Set hostname
   hostname:
