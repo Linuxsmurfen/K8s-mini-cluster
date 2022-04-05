@@ -25,7 +25,7 @@ ansible-playbook k8s-init.yml -u <existing user> -k -K
 
 5. Verify connectivity to all servers 
 ~~~
-ansible -m ping cluster
+ansible -m ping nodes
 ~~~
 
 6. Prepare and setup of kubernetes
