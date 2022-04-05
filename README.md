@@ -1,9 +1,6 @@
-# Mini-k8s-cluster
-A mini kubernetes cluster
+# Overview
+My playgroud for learning Kubernetes on baremetal.
 
-## Overview
-< Work in progress >   
-A internal kubernetes cluster with three nodes. The cluster will be loadbalanced and use an ingress with wildcard DNS. The storage will be served by ceph and remote NFS storage.
 
 ### Hardware
 ![Hardware](/mini-k8s-cluster.jpg)
