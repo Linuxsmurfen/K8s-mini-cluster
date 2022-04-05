@@ -3,7 +3,7 @@ k8s100 ansible_host=192.168.1.170
 k8s101
 k8s102
 
-[master]
+[controlplane]
 k8s100
 
 [workers]
