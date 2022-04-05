@@ -1,10 +1,5 @@
 # Setup the servers
 
-## Setup a bootstrap/bastion server from where the cluster will be installed
-1. Install 
-     - git
-     - ansible
-2. Clone the bootstrap stuff
 
 
 ## Install the OS
@@ -23,5 +18,6 @@ setparams 'Install Ubuntu Server'
 
 
 
-## 
+## Configure the OS
+1. 
 
