@@ -7,28 +7,28 @@ apt install ansible
 apt install sshpass (if required) 
 ~~~
 
-# Create ssh keys or copy the public key to .ssh/
+2. Create a ssh keys or copy the public key to .ssh/
 ~~~
 ssh-keygen 
 copy <pub>  ~/.ssh/id_rsa.pub
 ~~~
 
-# Verify the hosts
+3. Verify the hosts
 ~~~
 cat ./hosts
 ~~~
 
-# Create the 'k8s' user on the servers using ansible
+4. Create the 'k8s' user on the servers using ansible
 ~~~
 ansible-playbook k8s-init.yml -u <existing user> -k -K
 ~~~
 
-# Verify connectivity to all servers 
+5. Verify connectivity to all servers 
 ~~~
 ansible -m ping cluster
 ~~~
 
-# Prepare and setup of kubernetes
+6. Prepare and setup of kubernetes
 ~~~
-ansible-playbook k8s-setup.yml 
+ansible-playbook k8s-prepare.yml 
 ~~~
