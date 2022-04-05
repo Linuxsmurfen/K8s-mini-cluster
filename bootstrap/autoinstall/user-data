@@ -1,0 +1,41 @@
+#cloud-config
+autoinstall:
+  apt:
+    geoip: true
+    preserve_sources_list: false
+    primary:
+    - arches:
+      - amd64
+      - i386
+      uri: http://se.archive.ubuntu.com/ubuntu
+    - arches:
+      - default
+      uri: http://ports.ubuntu.com/ubuntu-ports
+  identity:
+    hostname: k8snode
+    password: <...the passwd hash...>
+    realname: k8suser
+    username: k8s
+  kernel:
+    package: linux-generic
+  keyboard:
+    layout: se
+    toggle: null
+    variant: ''
+  locale: en_US.UTF-8
+  user-data:
+    timezone: Europe/Stockholm
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: true
+  storage:
+    layout:
+      name: lvm
+      match:
+       ssd: yes
+       size: smallest
+    swap:
+      size: 0
+  updates: security
+  version: 1
