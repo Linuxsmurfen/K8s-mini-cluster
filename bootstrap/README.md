@@ -2,7 +2,7 @@
 
 
 
-## Install the OS
+## Install the OS using autoinstall
 1. Download Ubuntu 20.04 LTS and create a USB boot stick
 2. Starta a small webserver 'python3 -m http.server 8080' to publish the data in the autoinstall directory on the bastion server.
 3. Boot the server and halt the installer and append the autoinstall settings to the grub menu.
@@ -18,6 +18,6 @@ setparams 'Install Ubuntu Server'
 
 
 
-## Configure the OS
-1. 
+## Configure the OS using Ansible
+
 
