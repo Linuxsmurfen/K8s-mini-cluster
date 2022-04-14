@@ -1,5 +1,5 @@
 ---
-- name: Prepare the nodes before install
+- name: Create the user before install
   hosts: nodes
   become: yes
   roles:
