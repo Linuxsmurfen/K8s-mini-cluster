@@ -18,8 +18,8 @@ Make sure DHCP and DNS are configured
 ### Bootstrap
 Install and prepare the OS
 - [X] Autoinstall
-- [ ] (Baremetal provisioning)
-- [ ] Prepare the OS
+- [ ] Baremetal provisioning
+- [X] Prepare the OS
 
 ### K8s install
 Configure the OS and install Kubernetes using Ansible
