@@ -32,14 +32,12 @@ Make sure DHCP and DNS are configured
 - [X] DHCP range
 
 ### Bootstrap
-Install and prepare the OS
+Install and configure the plattform
+
 - [X] Autoinstall
 - [ ] Baremetal provisioning
-- [X] Prepare the OS
-
-### K8s install
-Configure the OS and install Kubernetes using Ansible
-- [ ] Kubernetes installation using Kubeadm
+- [X] Configure the OS using Ansible
+- [ ] Install kubernetes using kubeadm
 - [ ] Network setup with Calico
 - [ ] GitOps using Flux and SOPS
 
