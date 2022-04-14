@@ -18,7 +18,14 @@
     regexp: swap
     state: absent
 
- 
+
+# Remove old swap file
+- name: Delete old swap file
+  file:
+    state: absent
+    path: /swap.img
+
+
 # Containerd
 - name: Create a empty file for containerd module.
   copy:
