@@ -1,14 +1,30 @@
+
 # Overview
-My playgroud for learning Kubernetes on baremetal.
-
-
-### Hardware
+My playgroud for learning Kubernetes on baremetal.   
 ![Hardware](/mini-k8s-cluster.jpg)
 
-Three HP Elitedesk 800g2 nodes with
-- 16GB Memory
-- 256GB SSD
-- 500GB NVMe
+[![Home-Internet](https://img.shields.io/uptimerobot/status/babb?color=important&label=home%20internet&style=flat-square&logo=opnSense&logoColor=white)](https://uptimerobot.com)
+---
+
+## Hardware
+The hardware consists of three baremetal servers.
+
+| Device             | Ram  | OS disk   | Data disk  |
+|--------------------|------|-----------|------------|
+|HP Elitedesk 800 G2 | 16GB | 256GB SSD | 500GB NVMe |
+|HP Elitedesk 800 G2 | 16GB | 256GB SSD | 500GB NVMe |
+|HP Elitedesk 800 G2 | 16GB | 256GB SSD | 500GB NVMe |
+
+
+
+## Installation
+
+| Hostname | OS              | Role         | IP            |
+|----------|-----------------|--------------|---------------|
+| k8s100   |Ubuntu 20.04 LTS | Controlplane | 192.168.1.170 |
+| k8s101   |Ubuntu 20.04 LTS | Worker       | 192.168.1.171 |
+| k8s102   |Ubuntu 20.04 LTS | Worker       | 192.168.1.172 |
+
 
 ### Prereq
 Make sure DHCP and DNS are configured
