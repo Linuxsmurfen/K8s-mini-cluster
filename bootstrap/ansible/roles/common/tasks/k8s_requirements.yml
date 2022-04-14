@@ -125,13 +125,11 @@
 
 
 # Hold packages
-- name: Hold kubeadm
-  dpkg_selections:
-    name: 
+- dpkg_selections: name={{ item }} selection=hold
+  with_items:
     - kubeadm
     - kubectl
     - kubelet
-    selection: hold
 
  
 # Enable kubelet
