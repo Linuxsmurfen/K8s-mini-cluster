@@ -68,6 +68,7 @@
       - curl
       - containerd
       - nfs-common
+    update_cache: yes
     state: present
 
  
@@ -116,6 +117,16 @@
     - kubectl
     - kubelet
     state: present
+
+
+# Hold packages
+- name: Hold kubeadm
+  dpkg_selections:
+    name: 
+    - kubeadm
+    - kubectl
+    - kubelet
+    selection: hold
 
  
 # Enable kubelet
