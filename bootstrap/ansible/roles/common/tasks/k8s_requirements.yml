@@ -59,6 +59,12 @@
 - name: Apply sysctl params without reboot.
   command: sysctl --system
 
+
+# Update apr-cache
+- name: Run the equivalent of "apt-get update"
+  apt:
+    update_cache: yes
+    
  
 # Install prereqs
 - name: Installing Prerequisites for Kubernetes
@@ -68,7 +74,6 @@
       - curl
       - containerd
       - nfs-common
-    update_cache: yes
     state: present
 
  
