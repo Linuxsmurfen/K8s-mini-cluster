@@ -19,11 +19,21 @@ The hardware consists of three baremetal servers.
 
 ## Installation
 
+
 | Hostname | OS              | Role         | IP            |
 |----------|-----------------|--------------|---------------|
 | k8s100   |Ubuntu 20.04 LTS | Controlplane | 192.168.1.170 |
 | k8s101   |Ubuntu 20.04 LTS | Worker       | 192.168.1.171 |
 | k8s102   |Ubuntu 20.04 LTS | Worker       | 192.168.1.172 |
+
+
+### Settings
+| Name                 | CIDR              |
+|----------------------|-------------------|
+| Node network         | 192.168.1.0/24    |
+| Pod network          | 172.20.0.0/16     |
+| Service network      |                   |
+| Loadbalancer network | 192.168.1.240-249 |
 
 
 ### Prereq
