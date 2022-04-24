@@ -1,0 +1,20 @@
+---
+
+# Check kubernetes versions on the servers
+- name: Check kubernetes versions
+  shell: uptime
+  register: cmd_out_uptime
+
+- name: Check OS version
+  shell: lsb_release -d
+  register: cmd_out_osver
+
+- name: Check kubeadm version
+  shell: dpkg -s kubeadm |grep Version
+  register: cmd_out_kubeadm
+
+- debug:
+    msg:
+    - "The uptime {{ cmd_out_uptime.stdout_lines }}"
+    - "The OS version {{ cmd_out_osver.stdout_lines }}"
+    - "The Kubeadm version {{ cmd_out_kubeadm.stdout_lines }}"
