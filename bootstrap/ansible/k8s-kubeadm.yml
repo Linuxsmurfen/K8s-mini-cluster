@@ -1,0 +1,14 @@
+---
+
+- name: Create a k8s cluster with kubeadm
+  hosts: controlplane
+  become: yes
+  roles:
+  # - controlplane
+
+
+- name: Add the workers to the cluster
+  hosts: workers
+  become: yes
+  roles:
+    - worker
