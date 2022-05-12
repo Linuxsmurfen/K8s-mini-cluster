@@ -67,7 +67,7 @@
   command: sysctl --system
 
 
-# Update apr-cache
+# Update apt-cache
 - name: Run the equivalent of "apt-get update"
   apt:
     update_cache: yes
