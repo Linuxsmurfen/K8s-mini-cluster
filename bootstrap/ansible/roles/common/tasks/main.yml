@@ -1,4 +1,5 @@
 ---
 
 # Prepare the servers
-- include: k8s_requirements.yml 
+- include: k8s_requirements.yml
+- include: k8s_versions.yml
