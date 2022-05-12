@@ -1,0 +1,22 @@
+---
+
+
+- name: Prepare the nodes for Kubernetes
+  hosts: nodes
+  become: yes
+  roles:
+    - common 
+
+
+- name: Create the controlplane
+  hosts: controlplane
+  become: yes
+  roles:
+    - controlplane
+
+
+- name: Add the workers
+  hosts: workers
+  become: yes
+  roles:
+    - worker
