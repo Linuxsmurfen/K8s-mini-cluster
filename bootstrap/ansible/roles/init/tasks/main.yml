@@ -2,12 +2,7 @@
 
 - name: create the remote user
   user: name={{remote_user}} append=yes state=present createhome=yes shell=/bin/bash
-
-#- name: allow 'k8s' to have passwordless sudo
-#  lineinfile:
-#    dest: /etc/sudoers
-#    line: 'k8s ALL=(ALL) NOPASSWD: ALL'
-#    validate: 'visudo -cf %s'
+  
 
 - name: Add the remote user to sudo
   lineinfile:
@@ -17,6 +12,7 @@
     mode: 0440
     create: yes
     validate: 'visudo -cf %s'
+
 
 - name: set up authorized keys for the remote user
   authorized_key: user={{remote_user}}  key="{{item}}"
