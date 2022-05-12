@@ -99,9 +99,9 @@
 # Reconfig containerd
 - name: Configure Cgroup for Kubernetes
   ansible.builtin.replace:
-  path: /etc/containerd/config.toml
-  regexp: 'SystemdCgroup = false'
-  replace: 'SystemdCgroup = true'
+    path: /etc/containerd/config.toml
+    regexp: 'SystemdCgroup = false'
+    replace: 'SystemdCgroup = true'
 
 
 # Start containerd
