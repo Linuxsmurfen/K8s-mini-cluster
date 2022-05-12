@@ -18,7 +18,7 @@ copy <pub>  ~/.ssh/id_rsa.pub
 vi ./hosts
 ~~~
 
-4. Create the 'k8s' user on the servers using ansible
+4. Create the *remote_user* on the servers using ansible
 ~~~
 ansible-playbook k8s-init.yml -u <existing user> -k -K
 ~~~
