@@ -3,6 +3,7 @@
 
 - name: Prepare the nodes for Kubernetes
   hosts: nodes
+  remote_user: {{remote_user}}
   become: yes
   roles:
     - common 
@@ -10,6 +11,7 @@
 
 - name: Create the controlplane
   hosts: controlplane
+  remote_user: {{remote_user}}
   become: yes
   roles:
     - controlplane
@@ -17,6 +19,7 @@
 
 - name: Add the workers
   hosts: workers
+  remote_user: {{remote_user}}
   become: yes
   roles:
     - worker
