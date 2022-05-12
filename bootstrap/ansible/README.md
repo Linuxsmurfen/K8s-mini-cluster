@@ -43,8 +43,11 @@ ansible-playbook k8s-setup.yml
 # Remove Kubernetes
 
 ~~~
-sudo kubeadm reset
+kubeadm reset
 rm -rf $HOME/.kube
 sudo rm -rf /etc/cni/net.d
 sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
+
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
+sudo apt-get autoremove  
 ~~~
