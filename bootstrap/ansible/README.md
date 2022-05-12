@@ -13,9 +13,9 @@ ssh-keygen
 copy <pub>  ~/.ssh/id_rsa.pub
 ~~~
 
-3. Verify the hosts
+3. Verify/edit the hosts file
 ~~~
-cat ./hosts
+vi ./hosts
 ~~~
 
 4. Create the 'k8s' user on the servers using ansible
