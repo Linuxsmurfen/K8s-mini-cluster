@@ -1,7 +1,7 @@
 ---
 
-- name: create the 'k8s' user
-  user: name=k8s append=yes state=present createhome=yes shell=/bin/bash
+- name: create the remote user
+  user: name={{remote_user}} append=yes state=present createhome=yes shell=/bin/bash
 
 #- name: allow 'k8s' to have passwordless sudo
 #  lineinfile:
@@ -9,16 +9,16 @@
 #    line: 'k8s ALL=(ALL) NOPASSWD: ALL'
 #    validate: 'visudo -cf %s'
 
-- name: Add user "k8s" to sudo
+- name: Add the remote user to sudo
   lineinfile:
-    path: /etc/sudoers.d/k8suser
-    line: 'k8s ALL=(ALL) NOPASSWD: ALL'
+    path: /etc/sudoers.d/ansibleuser
+    line: '{{remote_user}}  ALL=(ALL) NOPASSWD: ALL'
     state: present
     mode: 0440
     create: yes
     validate: 'visudo -cf %s'
 
-- name: set up authorized keys for the Kubernetes user
-  authorized_key: user=k8s key="{{item}}"
+- name: set up authorized keys for the remote user
+  authorized_key: user={{remote_user}}  key="{{item}}"
   with_file:
     - ~/.ssh/id_rsa.pub
