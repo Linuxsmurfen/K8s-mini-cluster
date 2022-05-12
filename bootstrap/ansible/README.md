@@ -32,7 +32,7 @@ ansible -m ping nodes
 
 # Kubernetes setup
 
-Prepare the servers and installs Kubernetes via kubeadm.
+Prepares the servers and installs Kubernetes via kubeadm.
 ~~~
 ansible-playbook k8s-setup.yml 
 ~~~
