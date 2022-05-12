@@ -95,7 +95,15 @@
 - name: Configure containerd.
   shell: /usr/bin/containerd config default > /etc/containerd/config.toml
 
- 
+
+# Reconfig containerd
+- name: Configure Cgroup for Kubernetes
+  ansible.builtin.replace:
+  path: /etc/containerd/config.toml
+  regexp: 'SystemdCgroup = false'
+  replace: 'SystemdCgroup = true'
+
+
 # Start containerd
 - name: Enable containerd service, and start it.
   systemd:
