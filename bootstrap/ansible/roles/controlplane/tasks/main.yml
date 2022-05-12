@@ -2,14 +2,14 @@
 
 
 - name: initialize the cluster
-  shell: kubeadm init --pod-network-cidr=172.20.0.0/16
+  shell: kubeadm init --pod-network-cidr="{{ pod_cidr }}"
   args:
     chdir: $HOME
     creates: cluster_initialized.txt
 
 - name: create .kube directory
   become: yes
-  become_user: k8s
+  become_user: "{{ remote_user }}"
   file:
     path: $HOME/.kube
     state: directory
@@ -20,11 +20,11 @@
     src: /etc/kubernetes/admin.conf
     dest: /home/k8s/.kube/config
     remote_src: yes
-    owner: k8s
+    owner: "{{ remote_user }}"
 
 - name: install Pod network
   become: yes
-  become_user: k8s
+  become_user: "{{ remote_user }}"
   shell: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml 
   args:
     chdir: $HOME
