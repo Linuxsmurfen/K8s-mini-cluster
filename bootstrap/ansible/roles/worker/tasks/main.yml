@@ -1,0 +1,5 @@
+---
+
+# TEST
+- name: test
+  shell: hostname
