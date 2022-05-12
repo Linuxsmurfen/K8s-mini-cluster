@@ -1,6 +1,0 @@
----
-- name: Prepare the nodes before install
-  hosts: nodes
-  become: yes
-  roles:
-    - common 
