@@ -32,14 +32,11 @@ ansible -m ping nodes
 
 # Kubernetes setup
 
-1. Install Kubeadm and adjust the servers
+Prepare the servers and installs Kubernetes via kubeadm.
 ~~~
-ansible-playbook k8s-prepare.yml 
+ansible-playbook k8s-setup.yml 
 ~~~
 
-2. Setup the ControlPlane node
-
-3. Setup the Worker nodes
 
 
 
