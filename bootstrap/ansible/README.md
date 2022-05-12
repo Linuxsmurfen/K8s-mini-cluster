@@ -28,7 +28,26 @@ ansible-playbook k8s-init.yml -u <existing user> -k -K
 ansible -m ping nodes
 ~~~
 
-6. Prepare and setup of kubernetes
+
+
+# Kubernetes setup
+
+1. Install Kubeadm and adjust the servers
 ~~~
 ansible-playbook k8s-prepare.yml 
+~~~
+
+2. Setup the ControlPlane node
+
+3. Setup the Worker nodes
+
+
+
+# Remove Kubernetes
+
+~~~
+sudo kubeadm reset
+rm -rf $HOME/.kube
+sudo rm -rf /etc/cni/net.d
+sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
 ~~~
