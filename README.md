@@ -32,7 +32,7 @@ The hardware consists of three baremetal servers.
 |----------------------|-------------------|
 | Node network         | 192.168.1.0/24    |
 | Pod network          | 172.20.0.0/16     |
-| Service network      |                   |
+| Service network      | 10.96.0.0/12      |
 | Loadbalancer network | 192.168.1.240-249 |
 
 
