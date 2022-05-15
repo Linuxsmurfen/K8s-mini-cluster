@@ -18,7 +18,6 @@ k8s_version=1.24.0-00
 
 [controlplane:vars]
 role=controlplane
-cni=calico
 pod_cidr=172.20.0.0/16
 
 [workers:vars]
