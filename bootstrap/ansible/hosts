@@ -14,7 +14,7 @@ k8s102
 
 [all:vars]
 remote_user=k8s
-k8s_version=1.23.6-00
+k8s_version=1.24.0-00
 cri_version=1.5.5-0ubuntu3~20.04.2
 
 [controlplane:vars]
