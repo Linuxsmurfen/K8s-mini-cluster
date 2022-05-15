@@ -7,6 +7,7 @@
     chdir: $HOME
     creates: cluster_initialized.txt
 
+
 - name: create .kube directory
   become: yes
   become_user: "{{ remote_user }}"
@@ -15,12 +16,14 @@
     state: directory
     mode: 0755
 
+
 - name: copies admin.conf to user's kube config
   copy:
     src: /etc/kubernetes/admin.conf
     dest: "/home/{{ remote_user }}/.kube/config"
     remote_src: yes
     owner: "{{ remote_user }}"
+
 
 - name: install Pod network
   become: yes
@@ -31,14 +34,10 @@
     
     
 - name: Get the token for joining the worker nodes.
-  become: yes
-  become_user: "{{ remote_user }}"
   shell: kubeadm token create  --print-join-command
   register: kubernetes_join_command
 
 - debug:
     msg: "{{ kubernetes_join_command.stdout }}"
 
-- set_fact:
-    kubeadm_join: "{{ kubernetes_join_command.stdout }}"
 
