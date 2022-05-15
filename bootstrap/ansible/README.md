@@ -31,12 +31,16 @@ ansible -m ping nodes
 
 
 # Create the Kubernetes cluster
-
 Prepares the servers and installs Kubernetes via kubeadm.
 ~~~
 ansible-playbook k8s-setup.yaml 
 ~~~
 
+
+# Check the Kubernetes cluster
+~~~
+ansible-playbook k8s-check.yaml 
+~~~
 
 
 
