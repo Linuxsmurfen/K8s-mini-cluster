@@ -15,3 +15,8 @@
       become: yes
       become_user: "{{ remote_user }}"
       shell: rm -rf $HOME/.kube
+
+
+## Notes for additional cleanup 
+#sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
+#sudo apt-get autoremove  
