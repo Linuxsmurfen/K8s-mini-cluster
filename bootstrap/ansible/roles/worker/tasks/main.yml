@@ -1,6 +1,6 @@
 ---
 
-
+# Get the join command from the first controlplane node defined in the inventory file.
 - name: Join the worker node
   shell: "{{hostvars[groups['controlplane'][0]]['kubernetes_join_command'].stdout}}"
   register: kube_join
