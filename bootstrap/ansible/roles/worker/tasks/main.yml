@@ -1,5 +1,10 @@
 ---
 
-# TEST
-- name: test
-  shell: hostname
+
+- name: Join the worker node
+  shell: "{{ kubernetes_join_command.stdout }} > /tmp/cluster_join.out"
+  register: kube_join
+
+- debug:
+    msg: "{{ kube_join.stdout }}"
+
