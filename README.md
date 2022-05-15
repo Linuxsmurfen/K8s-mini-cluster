@@ -48,7 +48,7 @@ Install and configure the plattform
 - [ ] Baremetal provisioning
 - [X] Configure the OS using Ansible
 - [X] Install kubernetes using kubeadm
-- [ ] Network setup with Calico
+- [X] Network setup with Calico
 - [ ] GitOps using Flux and SOPS
 
 ### Infra
