@@ -20,7 +20,7 @@ vi ./hosts
 
 4. Create the *remote_user* on the servers using ansible
 ~~~
-ansible-playbook k8s-init.yml -u <existing user> -k -K
+ansible-playbook k8s-init.yaml -u <existing user> -k -K
 ~~~
 
 5. Verify connectivity to all servers 
@@ -34,14 +34,18 @@ ansible -m ping nodes
 
 Prepares the servers and installs Kubernetes via kubeadm.
 ~~~
-ansible-playbook k8s-setup.yml 
+ansible-playbook k8s-setup.yaml 
 ~~~
 
 
 
 
 # Remove Kubernetes
+~~~
+ansible-playbook k8s-wipe.yaml 
+~~~
 
+notes
 ~~~
 sudo kubeadm reset -f
 sudo rm -rf /etc/cni/net.d
