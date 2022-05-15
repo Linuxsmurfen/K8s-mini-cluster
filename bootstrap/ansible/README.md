@@ -40,7 +40,7 @@ ansible-playbook k8s-setup.yaml
 
 
 
-# Remove Kubernetes
+# Wipe the Kubernetes cluster
 ~~~
 ansible-playbook k8s-wipe.yaml 
 ~~~
