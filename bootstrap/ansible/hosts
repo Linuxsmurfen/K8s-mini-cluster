@@ -19,6 +19,7 @@ k8s_version=1.24.0-00
 [controlplane:vars]
 role=controlplane
 pod_cidr=172.20.0.0/16
+lb_pool=192.168.1.240-192.168.1.249
 
 [workers:vars]
 role=worker
