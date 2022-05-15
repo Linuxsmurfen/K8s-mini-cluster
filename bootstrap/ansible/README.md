@@ -44,14 +44,3 @@ ansible-playbook k8s-setup.yaml
 ~~~
 ansible-playbook k8s-wipe.yaml 
 ~~~
-
-notes
-~~~
-sudo kubeadm reset -f
-sudo rm -rf /etc/cni/net.d
-sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
-rm -rf $HOME/.kube
-
-sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
-sudo apt-get autoremove  
-~~~
