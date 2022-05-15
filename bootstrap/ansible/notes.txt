@@ -1,0 +1,4 @@
+sudo apt-mark unhold kubelet kubeadm kubectl
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-mark hold kubelet kubeadm kubectl
