@@ -30,7 +30,7 @@ ansible -m ping nodes
 
 
 
-# Kubernetes setup
+# Create the Kubernetes cluster
 
 Prepares the servers and installs Kubernetes via kubeadm.
 ~~~
