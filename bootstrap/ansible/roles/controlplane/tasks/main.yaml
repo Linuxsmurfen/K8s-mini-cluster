@@ -23,7 +23,7 @@
     dest: "/home/{{ remote_user }}/.kube/config"
     remote_src: yes
     owner: "{{ remote_user }}"
-
+  # Need to change the premissions to 0600
 
 - name: install Pod network
   become: yes
