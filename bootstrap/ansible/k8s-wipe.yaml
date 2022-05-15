@@ -1,0 +1,17 @@
+- hosts: nodes
+  become: yes
+
+  tasks:
+    - name: Kubeadm reset
+      shell: kubeadm reset -f
+
+    - name: Remove CNI
+      shell: rm -rf /etc/cni/net.d
+
+    - name: Cleanup iptables
+      shell: iptables -F && iptables -t nat -F && iptables -t mangle -F && iptables -X
+
+    - name: Cleanup .kube dir
+      become: yes
+      become_user: "{{ remote_user }}"
+      shell: rm -rf $HOME/.kube
