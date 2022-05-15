@@ -2,7 +2,7 @@
 
 
 - name: Join the worker node
-  shell: "{{ kubernetes_join_command.stdout }} > /tmp/cluster_join.out"
+  shell: "{{hostvars[groups['controlplane'][0]]['kubernetes_join_command'].stdout}}"
   register: kube_join
 
 - debug:
