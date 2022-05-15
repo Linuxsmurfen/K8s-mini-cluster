@@ -1,0 +1,9 @@
+- hosts: controlplane
+
+  tasks:
+    - name: Kubernetes cluster nodes
+      shell: kubectl get nodes -o wide
+      register: kubectl_nodes
+
+    - debug:
+        msg: "{{ kubectl_nodes.stdout_lines }}"
