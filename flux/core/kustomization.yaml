@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 - namespaces
 # - metallb
-# - rook-ceph
-# - nfs-provisioner
 # - ingress
+# - nfs-provisioner
+# - rook-ceph
