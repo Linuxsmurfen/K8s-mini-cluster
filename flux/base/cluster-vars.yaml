@@ -4,7 +4,7 @@ metadata:
   name: cluster-vars
   namespace: flux-system
 data:
-  CONFIG_METALLB_RANGE: "192.168.1.240-192.168.3.249"
+  CONFIG_METALLB_RANGE: "192.168.1.240-192.168.1.249"
   CONFIG_NFS_SERVER_ADDRESS: "192.168.1.200"
   CONFIG_NFS_SERVER_PATH: "/volume1/NFS"
   CONFIG_TIMEZONE: "Europe/Stockholm"
