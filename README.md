@@ -22,9 +22,9 @@ The hardware consists of three baremetal servers.
 
 | Hostname | OS              | Role         | IP            |
 |----------|-----------------|--------------|---------------|
-| k8s100   |Ubuntu 20.04 LTS | Controlplane | 192.168.1.170 |
-| k8s101   |Ubuntu 20.04 LTS | Worker       | 192.168.1.171 |
-| k8s102   |Ubuntu 20.04 LTS | Worker       | 192.168.1.172 |
+| k8s100   |Ubuntu 22.04 LTS | Controlplane | 192.168.1.170 |
+| k8s101   |Ubuntu 22.04 LTS | Worker       | 192.168.1.171 |
+| k8s102   |Ubuntu 22.04 LTS | Worker       | 192.168.1.172 |
 
 
 ### Settings
