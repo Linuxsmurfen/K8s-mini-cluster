@@ -53,17 +53,17 @@ Install and configure the plattform
 
 ### Infra
 Configure all base services using GitOps
-- [ ] MetalLB
-- [ ] Ingress-nginx
-- [ ] NFS storage
-- [ ] Rook-Ceph storage
-- [ ] Velero
+- [X] MetalLB
+- [X] Ingress-nginx
+- [X] NFS storage
+- [X] Rook-Ceph storage
+- [X] Velero
 
 ### Apps
 Configure applications using GitOps
-- [ ] HomeAssistant
+- [X] HomeAssistant
 - [ ] DeConz
-- [ ] Gitea
+- [X] Gitea
 - [ ] KubeView
 
 
