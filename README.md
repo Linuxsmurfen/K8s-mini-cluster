@@ -22,9 +22,9 @@ The hardware consists of three baremetal servers.
 
 | Hostname | OS              | Role         | IP            |
 |----------|-----------------|--------------|---------------|
-| k8s100   |Ubuntu 22.04 LTS | Controlplane | 192.168.1.170 |
-| k8s101   |Ubuntu 22.04 LTS | Worker       | 192.168.1.171 |
-| k8s102   |Ubuntu 22.04 LTS | Worker       | 192.168.1.172 |
+| k8s100   |Ubuntu 24.04 LTS | Controlplane | 192.168.1.170 |
+| k8s101   |Ubuntu 24.04 LTS | Worker       | 192.168.1.171 |
+| k8s102   |Ubuntu 24.04 LTS | Worker       | 192.168.1.172 |
 
 
 ### Settings
@@ -42,17 +42,17 @@ Make sure DHCP and DNS are configured
 - [X] DHCP range
 
 ### Bootstrap
-Install and configure the plattform
+Install and configure the platform
 
-- [X] Autoinstall
-- [ ] Baremetal provisioning
+- [X] OS provisioning using Netbootxyz
+- [X] Ubuntu configuration using the autoinstall feature
 - [X] Configure the OS using Ansible
 - [X] Install kubernetes using kubeadm
-- [X] Network setup with Calico
-- [ ] GitOps using Flux and SOPS
+- [ ] Network setup with Cilium
+- [ ] GitOps using ArgoCD
 
 ### Infra
-Configure all base services using GitOps
+Configure all base services
 - [X] MetalLB
 - [X] Ingress-nginx
 - [X] NFS storage
@@ -60,11 +60,9 @@ Configure all base services using GitOps
 - [X] Velero
 
 ### Apps
-Configure applications using GitOps
+Configure applications
 - [X] HomeAssistant
-- [ ] DeConz
 - [X] Gitea
-- [ ] KubeView
 
 
 
